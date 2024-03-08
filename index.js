@@ -3,12 +3,19 @@
 function checkCashRegister(price, cash, cid) {
     //calculate change
     let change = cash - price;
-    console.log(change);
+    //console.log(change);
 
     //get total cash in register
     let totalCID = 0;
 
+    for (let i = 0; i < cid.length; i++) {
+      //console.log(cid[i][1]);
+      totalCID += cid[i][1];
+    }
     
+    //round to 2 dp
+    totalCID = totalCID.toFixed(2);
+    console.log(totalCID);
 
 
 
